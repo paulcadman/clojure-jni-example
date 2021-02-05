@@ -27,7 +27,7 @@ header: $(C_HEADER)
 
 $(C_HEADER): $(CLASS_FILE)
 	mkdir -p $(JNI_DIR)
-	javah -o $(C_HEADER) -cp $(CLASS_DIR) $(CLASS_NAME)
+	javac -h $(JNI_DIR) -cp $(CLASS_DIR) $(JAVA_FILE)
 	@touch $(C_HEADER)
 
 lib: $(LIB_FILE)
